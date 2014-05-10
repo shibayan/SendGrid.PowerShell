@@ -45,12 +45,15 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks\BlocksResult.cs" />
     <Compile Include="Blocks\RemoveSendGridBlocks.cs" />
     <Compile Include="Blocks\GetSendGridBlocks.cs" />
+    <Compile Include="Bounces\BouncesResult.cs" />
     <Compile Include="Bounces\RemoveSendGridBounces.cs" />
     <Compile Include="Bounces\GetSendGridBounces.cs" />
     <Compile Include="Common\CmdletBase.cs" />
     <Compile Include="Common\GenericResult.cs" />
+    <Compile Include="InvalidEmails\InvalidEmailsResult.cs" />
     <Compile Include="InvalidEmails\RemoveSendGridInvalidEmails.cs" />
     <Compile Include="InvalidEmails\GetSendGridInvalidEmails.cs" />
     <Compile Include="Parse\ParseResult.cs" />
@@ -68,9 +71,11 @@
     <Compile Include="Parse\SetSendGridParse.cs" />
     <Compile Include="SpamReports\RemoveSendGridSpamReports.cs" />
     <Compile Include="SpamReports\GetSendGridSpamReports.cs" />
+    <Compile Include="SpamReports\SpamReportsResult.cs" />
     <Compile Include="Unsubscribes\AddSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\RemoveSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\GetSendGridUnsubscribes.cs" />
+    <Compile Include="Unsubscribes\UnsubscribesResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

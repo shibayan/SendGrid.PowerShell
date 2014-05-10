@@ -12,7 +12,9 @@ namespace SendGridPowershell.Unsubscribes
 
         protected override void ProcessRecord()
         {
-            throw new PSNotImplementedException();
+            var result = Post<GenericResult>("unsubscribes", "delete", new { email = Email });
+
+            WriteObject(result);
         }
     }
 }

@@ -16,9 +16,20 @@ namespace SendGridPowershell.Mail
         [Parameter(Position = 3, Mandatory = true)]
         public string Subject { get; set; }
 
+        [Parameter(Position = 4, Mandatory = false)]
+        public string Text { get; set; }
+
         protected override void ProcessRecord()
         {
-            throw new PSNotImplementedException();
+            var result = Post<GenericResult>("mail", "send", new
+            {
+                to = To,
+                from = From,
+                subject = Subject,
+                text = Text
+            });
+
+            WriteObject(result);
         }
     }
 }

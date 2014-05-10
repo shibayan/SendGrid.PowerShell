@@ -12,7 +12,9 @@ namespace SendGridPowershell.SpamReports
 
         protected override void ProcessRecord()
         {
-            throw new PSNotImplementedException();
+            var result = Post<GenericResult>("spamreports", "delete", new { email = Email });
+
+            WriteObject(result);
         }
     }
 }

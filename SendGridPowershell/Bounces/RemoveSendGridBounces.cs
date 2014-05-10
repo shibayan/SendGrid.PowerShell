@@ -7,9 +7,33 @@ namespace SendGridPowershell.Bounces
     [Cmdlet("Remove", "SendGridBounces")]
     public class RemoveSendGridBounces : CmdletBase
     {
+        [Parameter(Position = 1, Mandatory = false)]
+        public string StartDate { get; set; }
+
+        [Parameter(Position = 2, Mandatory = false)]
+        public string EndDate { get; set; }
+
+        [Parameter(Position = 3, Mandatory = false)]
+        public string Type { get; set; }
+
+        [Parameter(Position = 4, Mandatory = false)]
+        public string Email { get; set; }
+
+        [Parameter(Position = 5, Mandatory = false)]
+        public bool? DeleteAll { get; set; }
+
         protected override void ProcessRecord()
         {
-            throw new PSNotImplementedException();
+            var result = Post<GenericResult>("bounces", "delete", new
+            {
+                start_date = StartDate,
+                end_date = EndDate,
+                type = Type,
+                email = Email,
+                delete_all = (DeleteAll ?? false) ? "1" : null
+            });
+
+            WriteObject(result);
         }
     }
 }

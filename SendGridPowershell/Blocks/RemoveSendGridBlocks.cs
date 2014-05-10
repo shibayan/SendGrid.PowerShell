@@ -12,7 +12,9 @@ namespace SendGridPowershell.Blocks
 
         protected override void ProcessRecord()
         {
-            throw new PSNotImplementedException();
+            var result = Post<GenericResult>("blocks", "delete", new { email = Email });
+
+            WriteObject(result);
         }
     }
 }
