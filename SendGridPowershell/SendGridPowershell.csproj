@@ -72,6 +72,9 @@
     <Compile Include="SpamReports\RemoveSendGridSpamReports.cs" />
     <Compile Include="SpamReports\GetSendGridSpamReports.cs" />
     <Compile Include="SpamReports\SpamReportsResult.cs" />
+    <Compile Include="Statistics\GetSendGridAdvancedStats.cs" />
+    <Compile Include="Statistics\GetSendGridStats.cs" />
+    <Compile Include="Statistics\StatsResult.cs" />
     <Compile Include="Unsubscribes\AddSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\RemoveSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\GetSendGridUnsubscribes.cs" />
