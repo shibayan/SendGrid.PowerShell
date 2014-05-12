@@ -4,10 +4,11 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Unsubscribes
 {
-    [Cmdlet("Add", "SendGridUnsubscribes")]
+    [Cmdlet(VerbsCommon.Add, "SendGridUnsubscribes")]
     public class AddSendGridUnsubscribes : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true)]
+        [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
+        [ValidateNotNullOrEmpty]
         public string Email { get; set; }
 
         protected override void ProcessRecord()

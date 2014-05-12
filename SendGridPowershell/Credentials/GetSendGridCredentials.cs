@@ -4,10 +4,11 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Credentials
 {
-    [Cmdlet("Get", "SendGridCredentials")]
+    [Cmdlet(VerbsCommon.Get, "SendGridCredentials")]
     public class GetSendGridCredentials : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = false)]
+        [Parameter(Position = 0, Mandatory = false, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
+        [ValidateNotNullOrEmpty]
         public string Username { get; set; }
 
         protected override void ProcessRecord()

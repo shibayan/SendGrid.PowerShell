@@ -4,13 +4,15 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Parse
 {
-    [Cmdlet("Set", "SendGridParse")]
-    public class SetSendGridParse : CmdletBase
+    [Cmdlet(VerbsCommon.Add, "SendGridParse")]
+    public class AddSendGridParse : CmdletBase
     {
         [Parameter(Position = 1, Mandatory = true)]
+        [ValidateNotNullOrEmpty]
         public string Hostname { get; set; }
 
         [Parameter(Position = 2, Mandatory = true)]
+        [ValidateNotNullOrEmpty]
         public string Url { get; set; }
 
         [Parameter(Position = 3, Mandatory = false)]

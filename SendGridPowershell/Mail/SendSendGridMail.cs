@@ -7,16 +7,16 @@ namespace SendGridPowershell.Mail
     [Cmdlet("Send", "SendGridMail")]
     public class SendSendGridMail : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true)]
+        [Parameter(Position = 0, Mandatory = true)]
         public string To { get; set; }
 
-        [Parameter(Position = 2, Mandatory = true)]
+        [Parameter(Position = 1, Mandatory = true)]
         public string From { get; set; }
 
-        [Parameter(Position = 3, Mandatory = true)]
+        [Parameter(Position = 2, Mandatory = true)]
         public string Subject { get; set; }
 
-        [Parameter(Position = 4, Mandatory = false)]
+        [Parameter(Position = 3, Mandatory = false)]
         public string Text { get; set; }
 
         protected override void ProcessRecord()

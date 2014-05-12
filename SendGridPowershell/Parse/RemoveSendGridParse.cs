@@ -4,10 +4,11 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Parse
 {
-    [Cmdlet("Remove", "SendGridParse")]
+    [Cmdlet(VerbsCommon.Remove, "SendGridParse")]
     public class RemoveSendGridParse : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
+        [ValidateNotNullOrEmpty]
         public string Hostname { get; set; }
 
         protected override void ProcessRecord()

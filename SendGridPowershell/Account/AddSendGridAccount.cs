@@ -4,13 +4,15 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Account
 {
-    [Cmdlet("Add", "SendGridAccount")]
+    [Cmdlet(VerbsCommon.Add, "SendGridAccount")]
     public class AddSendGridAccount : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true)]
+        [Parameter(Position = 0, Mandatory = true)]
+        [ValidateNotNullOrEmpty]
         public string Username { get; set; }
 
-        [Parameter(Position = 2, Mandatory = true)]
+        [Parameter(Position = 1, Mandatory = true)]
+        [ValidateNotNullOrEmpty]
         public string Password { get; set; }
 
         protected override void ProcessRecord()

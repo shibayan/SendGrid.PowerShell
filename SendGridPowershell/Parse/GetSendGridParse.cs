@@ -4,7 +4,7 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Parse
 {
-    [Cmdlet("Get", "SendGridParse")]
+    [Cmdlet(VerbsCommon.Get, "SendGridParse")]
     public class GetSendGridParse : CmdletBase
     {
         protected override void ProcessRecord()

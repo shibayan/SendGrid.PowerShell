@@ -4,10 +4,11 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.SpamReports
 {
-    [Cmdlet("Remove", "SendGridSpamReports")]
+    [Cmdlet(VerbsCommon.Remove, "SendGridSpamReports")]
     public class RemoveSendGridSpamReports : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Position = 1, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
+        [ValidateNotNullOrEmpty]
         public string Email { get; set; }
 
         protected override void ProcessRecord()

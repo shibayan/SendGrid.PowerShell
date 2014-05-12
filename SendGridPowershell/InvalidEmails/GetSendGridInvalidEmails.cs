@@ -4,25 +4,25 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.InvalidEmails
 {
-    [Cmdlet("Get", "SendGridInvalidEmails")]
+    [Cmdlet(VerbsCommon.Get, "SendGridInvalidEmails")]
     public class GetSendGridInvalidEmails : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = false)]
+        [Parameter(Position = 0, Mandatory = false)]
         public int? Days { get; set; }
 
-        [Parameter(Position = 2, Mandatory = false)]
+        [Parameter(Position = 1, Mandatory = false)]
         public string StartDate { get; set; }
 
-        [Parameter(Position = 3, Mandatory = false)]
+        [Parameter(Position = 2, Mandatory = false)]
         public string EndDate { get; set; }
 
-        [Parameter(Position = 4, Mandatory = false)]
+        [Parameter(Position = 3, Mandatory = false)]
         public int? Limit { get; set; }
 
-        [Parameter(Position = 5, Mandatory = false)]
+        [Parameter(Position = 4, Mandatory = false)]
         public int? Offset { get; set; }
 
-        [Parameter(Position = 6, Mandatory = false)]
+        [Parameter(Position = 5, Mandatory = false)]
         public string Email { get; set; }
 
         protected override void ProcessRecord()

@@ -4,10 +4,11 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Credentials
 {
-    [Cmdlet("Remove", "SendGridCredentials")]
+    [Cmdlet(VerbsCommon.Remove, "SendGridCredentials")]
     public class RemoveSendGridCredentials : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
+        [ValidateNotNullOrEmpty]
         public string Username { get; set; }
 
         protected override void ProcessRecord()

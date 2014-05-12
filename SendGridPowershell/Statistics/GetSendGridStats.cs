@@ -4,22 +4,22 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Statistics
 {
-    [Cmdlet("Get", "SendGridStats")]
+    [Cmdlet(VerbsCommon.Get, "SendGridStats")]
     public class GetSendGridStats : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = false)]
+        [Parameter(Position = 0, Mandatory = false)]
         public int? Days { get; set; }
 
-        [Parameter(Position = 2, Mandatory = false)]
+        [Parameter(Position = 1, Mandatory = false)]
         public string StartDate { get; set; }
 
-        [Parameter(Position = 3, Mandatory = false)]
+        [Parameter(Position = 2, Mandatory = false)]
         public string EndDate { get; set; }
 
-        [Parameter(Position = 4, Mandatory = false)]
+        [Parameter(Position = 3, Mandatory = false)]
         public bool Aggregate { get; set; }
 
-        [Parameter(Position = 5, Mandatory = false)]
+        [Parameter(Position = 4, Mandatory = false)]
         public string Category { get; set; }
 
         protected override void ProcessRecord()

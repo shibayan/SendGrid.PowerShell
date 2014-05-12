@@ -4,7 +4,7 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.SpamReports
 {
-    [Cmdlet("Get", "SendGridSpamReports")]
+    [Cmdlet(VerbsCommon.Get, "SendGridSpamReports")]
     public class GetSendGridSpamReports : CmdletBase
     {
         [Parameter(Position = 1, Mandatory = false)]

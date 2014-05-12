@@ -57,7 +57,7 @@
     <Compile Include="Credentials\CredentialsResult.cs" />
     <Compile Include="Credentials\GetSendGridCredentials.cs" />
     <Compile Include="Credentials\RemoveSendGridCredentials.cs" />
-    <Compile Include="Credentials\UpdateSendGridCredentials.cs" />
+    <Compile Include="Credentials\SetSendGridCredentials.cs" />
     <Compile Include="InvalidEmails\InvalidEmailsResult.cs" />
     <Compile Include="InvalidEmails\RemoveSendGridInvalidEmails.cs" />
     <Compile Include="InvalidEmails\GetSendGridInvalidEmails.cs" />
@@ -73,7 +73,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Mail\SendSendGridMail.cs" />
-    <Compile Include="Parse\SetSendGridParse.cs" />
+    <Compile Include="Parse\AddSendGridParse.cs" />
     <Compile Include="SpamReports\RemoveSendGridSpamReports.cs" />
     <Compile Include="SpamReports\GetSendGridSpamReports.cs" />
     <Compile Include="SpamReports\SpamReportsResult.cs" />

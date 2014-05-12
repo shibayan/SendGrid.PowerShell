@@ -4,34 +4,34 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Profile
 {
-    [Cmdlet("Set", "SendGridProfile")]
+    [Cmdlet(VerbsCommon.Set, "SendGridProfile")]
     public class SetSendGridProfile : CmdletBase
     {
-        [Parameter(Position = 1, Mandatory = false)]
+        [Parameter(Position = 0, Mandatory = false)]
         public string FirstName { get; set; }
 
-        [Parameter(Position = 2, Mandatory = false)]
+        [Parameter(Position = 1, Mandatory = false)]
         public string LastName { get; set; }
 
-        [Parameter(Position = 3, Mandatory = false)]
+        [Parameter(Position = 2, Mandatory = false)]
         public string Address { get; set; }
 
-        [Parameter(Position = 4, Mandatory = false)]
+        [Parameter(Position = 3, Mandatory = false)]
         public string City { get; set; }
 
-        [Parameter(Position = 5, Mandatory = false)]
+        [Parameter(Position = 4, Mandatory = false)]
         public string State { get; set; }
 
-        [Parameter(Position = 6, Mandatory = false)]
+        [Parameter(Position = 5, Mandatory = false)]
         public string Country { get; set; }
 
-        [Parameter(Position = 7, Mandatory = false)]
+        [Parameter(Position = 6, Mandatory = false)]
         public string Zip { get; set; }
 
-        [Parameter(Position = 8, Mandatory = false)]
+        [Parameter(Position = 7, Mandatory = false)]
         public string Phone { get; set; }
 
-        [Parameter(Position = 9, Mandatory = false)]
+        [Parameter(Position = 8, Mandatory = false)]
         public string Website { get; set; }
 
         protected override void ProcessRecord()

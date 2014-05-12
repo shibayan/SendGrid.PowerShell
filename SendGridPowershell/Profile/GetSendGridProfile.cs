@@ -4,7 +4,7 @@ using SendGridPowershell.Common;
 
 namespace SendGridPowershell.Profile
 {
-    [Cmdlet("Get", "SendGridProfile")]
+    [Cmdlet(VerbsCommon.Get, "SendGridProfile")]
     public class GetSendGridProfile : CmdletBase
     {
         protected override void ProcessRecord()
