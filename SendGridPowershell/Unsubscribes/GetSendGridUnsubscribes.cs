@@ -38,7 +38,7 @@ namespace SendGridPowershell.Unsubscribes
                 email = Email
             });
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

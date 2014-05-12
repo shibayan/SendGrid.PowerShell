@@ -38,7 +38,7 @@ namespace SendGridPowershell.InvalidEmails
                 email = Email
             });
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

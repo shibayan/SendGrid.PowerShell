@@ -34,7 +34,7 @@ namespace SendGridPowershell.Blocks
                 offset = Offset
             });
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

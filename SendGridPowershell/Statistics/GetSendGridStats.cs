@@ -33,7 +33,7 @@ namespace SendGridPowershell.Statistics
                 category = Category
             });
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

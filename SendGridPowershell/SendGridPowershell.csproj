@@ -53,6 +53,11 @@
     <Compile Include="Bounces\GetSendGridBounces.cs" />
     <Compile Include="Common\CmdletBase.cs" />
     <Compile Include="Common\GenericResult.cs" />
+    <Compile Include="Credentials\AddSendGridCredentials.cs" />
+    <Compile Include="Credentials\CredentialsResult.cs" />
+    <Compile Include="Credentials\GetSendGridCredentials.cs" />
+    <Compile Include="Credentials\RemoveSendGridCredentials.cs" />
+    <Compile Include="Credentials\UpdateSendGridCredentials.cs" />
     <Compile Include="InvalidEmails\InvalidEmailsResult.cs" />
     <Compile Include="InvalidEmails\RemoveSendGridInvalidEmails.cs" />
     <Compile Include="InvalidEmails\GetSendGridInvalidEmails.cs" />
@@ -84,7 +89,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Credentials\" />
     <Folder Include="Filter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

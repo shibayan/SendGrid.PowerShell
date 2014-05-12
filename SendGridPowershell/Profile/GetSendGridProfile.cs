@@ -11,7 +11,7 @@ namespace SendGridPowershell.Profile
         {
             var result = Get<ProfileResult[]>("profile", "get");
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

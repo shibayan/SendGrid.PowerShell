@@ -42,7 +42,7 @@ namespace SendGridPowershell.Bounces
                 email = Email
             });
 
-            WriteObject(result);
+            WriteObject(result, true);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace SendGridPowershell.Parse
         {
             var result = Get<ParseResult>("parse", "get");
 
-            WriteObject(result.Parse);
+            WriteObject(result.Parse, true);
         }
     }
 }
