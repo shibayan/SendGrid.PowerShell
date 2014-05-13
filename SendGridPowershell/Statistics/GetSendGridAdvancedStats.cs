@@ -1,4 +1,5 @@
-﻿using System.Management.Automation;
+﻿using System;
+using System.Management.Automation;
 
 using SendGridPowershell.Common;
 
@@ -11,10 +12,10 @@ namespace SendGridPowershell.Statistics
         public string DateType { get; set; }
 
         [Parameter(Position = 1, Mandatory = true)]
-        public string StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
         [Parameter(Position = 2, Mandatory = false)]
-        public string EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [Parameter(Position = 3, Mandatory = false)]
         public string Metric { get; set; }
