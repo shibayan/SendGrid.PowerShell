@@ -58,6 +58,11 @@
     <Compile Include="Credentials\GetSendGridCredentials.cs" />
     <Compile Include="Credentials\RemoveSendGridCredentials.cs" />
     <Compile Include="Credentials\SetSendGridCredentials.cs" />
+    <Compile Include="Filter\DisableSendGridFilter.cs" />
+    <Compile Include="Filter\EnableSendGridFilter.cs" />
+    <Compile Include="Filter\FilterResult.cs" />
+    <Compile Include="Filter\GetSendGridAvailableFilter.cs" />
+    <Compile Include="Filter\SetSendGridFilter.cs" />
     <Compile Include="InvalidEmails\InvalidEmailsResult.cs" />
     <Compile Include="InvalidEmails\RemoveSendGridInvalidEmails.cs" />
     <Compile Include="InvalidEmails\GetSendGridInvalidEmails.cs" />
@@ -88,9 +93,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Filter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\installutil.exe "$(TargetDir)$(TargetFileName)"</PostBuildEvent>
