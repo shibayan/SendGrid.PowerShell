@@ -8,9 +8,9 @@ using System.Text;
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.Common
+namespace SendGrid.PowerShell.Common
 {
-    public abstract class CmdletBase : PSCmdlet
+    public abstract class CmdletBase : Cmdlet
     {
         protected static string ApiUser { get; set; }
 

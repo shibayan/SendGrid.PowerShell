@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
+using SendGrid.PowerShell.InvalidEmails.Models;
 
-namespace SendGridPowershell.InvalidEmails
+namespace SendGrid.PowerShell.InvalidEmails
 {
     [Cmdlet(VerbsCommon.Get, "SendGridInvalidEmails")]
     public class GetSendGridInvalidEmails : CmdletBase

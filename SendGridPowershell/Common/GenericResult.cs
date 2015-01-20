@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SendGridPowershell.Common
+namespace SendGrid.PowerShell.Common
 {
     public class GenericResult
     {

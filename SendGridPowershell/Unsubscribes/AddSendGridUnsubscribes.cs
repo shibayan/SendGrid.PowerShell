@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Unsubscribes
+namespace SendGrid.PowerShell.Unsubscribes
 {
     [Cmdlet(VerbsCommon.Add, "SendGridUnsubscribes")]
     public class AddSendGridUnsubscribes : CmdletBase

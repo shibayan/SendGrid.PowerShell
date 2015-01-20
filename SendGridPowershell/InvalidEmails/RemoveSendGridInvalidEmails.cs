@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.InvalidEmails
+namespace SendGrid.PowerShell.InvalidEmails
 {
     [Cmdlet(VerbsCommon.Remove, "SendGridInvalidEmails")]
     public class RemoveSendGridInvalidEmails : CmdletBase

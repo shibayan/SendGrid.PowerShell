@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SendGridPowershell.Credentials
+namespace SendGrid.PowerShell.Credentials.Models
 {
     public class CredentialsResult
     {

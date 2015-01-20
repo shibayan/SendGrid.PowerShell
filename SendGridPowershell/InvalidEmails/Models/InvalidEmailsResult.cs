@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.InvalidEmails
+namespace SendGrid.PowerShell.InvalidEmails.Models
 {
     public class InvalidEmailsResult
     {

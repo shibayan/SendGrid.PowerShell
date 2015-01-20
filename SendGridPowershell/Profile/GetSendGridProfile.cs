@@ -1,8 +1,9 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
+using SendGrid.PowerShell.Profile.Models;
 
-namespace SendGridPowershell.Profile
+namespace SendGrid.PowerShell.Profile
 {
     [Cmdlet(VerbsCommon.Get, "SendGridProfile")]
     public class GetSendGridProfile : CmdletBase

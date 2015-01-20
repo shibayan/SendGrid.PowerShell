@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.SpamReports
+namespace SendGrid.PowerShell.SpamReports
 {
     [Cmdlet(VerbsCommon.Remove, "SendGridSpamReports")]
     public class RemoveSendGridSpamReports : CmdletBase

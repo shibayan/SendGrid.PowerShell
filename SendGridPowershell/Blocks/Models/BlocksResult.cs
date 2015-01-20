@@ -2,9 +2,9 @@
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.Bounces
+namespace SendGrid.PowerShell.Blocks.Models
 {
-    public class BouncesResult
+    public class BlocksResult
     {
         [JsonProperty("status")]
         public string Status { get; set; }

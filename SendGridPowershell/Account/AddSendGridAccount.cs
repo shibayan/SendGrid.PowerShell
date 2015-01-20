@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Account
+namespace SendGrid.PowerShell.Account
 {
     [Cmdlet(VerbsCommon.Add, "SendGridAccount")]
     public class AddSendGridAccount : CmdletBase

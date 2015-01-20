@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Blocks
+namespace SendGrid.PowerShell.Blocks
 {
     [Cmdlet(VerbsCommon.Remove, "SendGridBlocks")]
     public class RemoveSendGridBlocks : CmdletBase

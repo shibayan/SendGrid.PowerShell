@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Bounces.Models;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Bounces
+namespace SendGrid.PowerShell.Bounces
 {
     [Cmdlet(VerbsCommon.Get, "SendGridBounces")]
     public class GetSendGridBounces : CmdletBase

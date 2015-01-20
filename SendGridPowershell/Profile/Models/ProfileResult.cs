@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SendGridPowershell.Profile
+namespace SendGrid.PowerShell.Profile.Models
 {
     public class ProfileResult
     {

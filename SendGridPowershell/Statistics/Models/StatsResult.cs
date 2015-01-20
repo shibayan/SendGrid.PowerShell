@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.Statistics
+namespace SendGrid.PowerShell.Statistics.Models
 {
     public class StatsResult
     {

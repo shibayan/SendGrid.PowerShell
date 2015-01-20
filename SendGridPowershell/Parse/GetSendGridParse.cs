@@ -1,8 +1,9 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
+using SendGrid.PowerShell.Parse.Models;
 
-namespace SendGridPowershell.Parse
+namespace SendGrid.PowerShell.Parse
 {
     [Cmdlet(VerbsCommon.Get, "SendGridParse")]
     public class GetSendGridParse : CmdletBase

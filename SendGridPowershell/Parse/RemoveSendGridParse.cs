@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Parse
+namespace SendGrid.PowerShell.Parse
 {
     [Cmdlet(VerbsCommon.Remove, "SendGridParse")]
     public class RemoveSendGridParse : CmdletBase

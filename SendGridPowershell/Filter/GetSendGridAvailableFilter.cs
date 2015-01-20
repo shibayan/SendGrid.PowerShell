@@ -1,8 +1,9 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
+using SendGrid.PowerShell.Filter.Models;
 
-namespace SendGridPowershell.Filter
+namespace SendGrid.PowerShell.Filter
 {
     [Cmdlet(VerbsCommon.Get, "SendGridAvailableFilter")]
     public class GetSendGridAvailableFilter : CmdletBase

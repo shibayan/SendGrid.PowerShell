@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
+using SendGrid.PowerShell.Unsubscribes.Models;
 
-namespace SendGridPowershell.Unsubscribes
+namespace SendGrid.PowerShell.Unsubscribes
 {
     [Cmdlet(VerbsCommon.Get, "SendGridUnsubscribes")]
     public class GetSendGridUnsubscribes : CmdletBase

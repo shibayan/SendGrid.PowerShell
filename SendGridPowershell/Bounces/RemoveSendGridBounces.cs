@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Bounces
+namespace SendGrid.PowerShell.Bounces
 {
     [Cmdlet(VerbsCommon.Remove, "SendGridBounces")]
     public class RemoveSendGridBounces : CmdletBase

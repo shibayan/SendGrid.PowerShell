@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.SpamReports
+namespace SendGrid.PowerShell.SpamReports.Models
 {
     public class SpamReportsResult
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{2A6395D6-8ABC-467C-8754-1842FCC03790}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SendGridPowershell</RootNamespace>
-    <AssemblyName>SendGridPowershell</AssemblyName>
+    <RootNamespace>SendGrid.PowerShell</RootNamespace>
+    <AssemblyName>SendGrid.PowerShell</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
@@ -45,58 +45,58 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blocks\BlocksResult.cs" />
+    <Compile Include="Blocks\Models\BlocksResult.cs" />
     <Compile Include="Blocks\RemoveSendGridBlocks.cs" />
     <Compile Include="Blocks\GetSendGridBlocks.cs" />
-    <Compile Include="Bounces\BouncesResult.cs" />
+    <Compile Include="Bounces\Models\BouncesResult.cs" />
     <Compile Include="Bounces\RemoveSendGridBounces.cs" />
     <Compile Include="Bounces\GetSendGridBounces.cs" />
     <Compile Include="Common\CmdletBase.cs" />
     <Compile Include="Common\GenericResult.cs" />
     <Compile Include="Credentials\AddSendGridCredentials.cs" />
-    <Compile Include="Credentials\CredentialsResult.cs" />
+    <Compile Include="Credentials\Models\CredentialsResult.cs" />
     <Compile Include="Credentials\GetSendGridCredentials.cs" />
     <Compile Include="Credentials\RemoveSendGridCredentials.cs" />
     <Compile Include="Credentials\SetSendGridCredentials.cs" />
     <Compile Include="Filter\DisableSendGridFilter.cs" />
     <Compile Include="Filter\EnableSendGridFilter.cs" />
-    <Compile Include="Filter\FilterResult.cs" />
+    <Compile Include="Filter\Models\FilterResult.cs" />
     <Compile Include="Filter\GetSendGridAvailableFilter.cs" />
     <Compile Include="Filter\SetSendGridFilter.cs" />
-    <Compile Include="InvalidEmails\InvalidEmailsResult.cs" />
+    <Compile Include="InvalidEmails\Models\InvalidEmailsResult.cs" />
     <Compile Include="InvalidEmails\RemoveSendGridInvalidEmails.cs" />
     <Compile Include="InvalidEmails\GetSendGridInvalidEmails.cs" />
-    <Compile Include="Parse\ParseResult.cs" />
+    <Compile Include="Parse\Models\ParseResult.cs" />
     <Compile Include="Parse\RemoveSendGridParse.cs" />
     <Compile Include="Parse\GetSendGridParse.cs" />
     <Compile Include="Profile\GetSendGridProfile.cs" />
-    <Compile Include="Profile\ProfileResult.cs" />
+    <Compile Include="Profile\Models\ProfileResult.cs" />
     <Compile Include="Profile\SetSendGridProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Account\AddSendGridAccount.cs" />
-    <Compile Include="SendGridSnapIn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Mail\SendSendGridMail.cs" />
     <Compile Include="Parse\AddSendGridParse.cs" />
     <Compile Include="SpamReports\RemoveSendGridSpamReports.cs" />
     <Compile Include="SpamReports\GetSendGridSpamReports.cs" />
-    <Compile Include="SpamReports\SpamReportsResult.cs" />
+    <Compile Include="SpamReports\Models\SpamReportsResult.cs" />
     <Compile Include="Statistics\GetSendGridAdvancedStats.cs" />
     <Compile Include="Statistics\GetSendGridStats.cs" />
-    <Compile Include="Statistics\StatsResult.cs" />
+    <Compile Include="Statistics\Models\StatsResult.cs" />
     <Compile Include="Unsubscribes\AddSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\RemoveSendGridUnsubscribes.cs" />
     <Compile Include="Unsubscribes\GetSendGridUnsubscribes.cs" />
-    <Compile Include="Unsubscribes\UnsubscribesResult.cs" />
+    <Compile Include="Unsubscribes\Models\UnsubscribesResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="SendGrid.psd1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\installutil.exe "$(TargetDir)$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

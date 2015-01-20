@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Blocks.Models;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Blocks
+namespace SendGrid.PowerShell.Blocks
 {
     [Cmdlet(VerbsCommon.Get, "SendGridBlocks")]
     public class GetSendGridBlocks : CmdletBase

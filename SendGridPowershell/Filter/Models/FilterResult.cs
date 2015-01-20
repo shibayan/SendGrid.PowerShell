@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SendGridPowershell.Filter
+namespace SendGrid.PowerShell.Filter.Models
 {
     public class FilterResult
     {

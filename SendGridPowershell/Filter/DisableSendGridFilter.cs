@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Filter
+namespace SendGrid.PowerShell.Filter
 {
     [Cmdlet("Disable", "SendGridFilter")]
     public class DisableSendGridFilter : CmdletBase

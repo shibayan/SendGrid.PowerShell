@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Credentials
+namespace SendGrid.PowerShell.Credentials
 {
     [Cmdlet(VerbsCommon.Set, "SendGridCredentials")]
     public class SetSendGridCredentials : CmdletBase

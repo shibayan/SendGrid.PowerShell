@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace SendGridPowershell.Unsubscribes
+namespace SendGrid.PowerShell.Unsubscribes.Models
 {
     public class UnsubscribesResult
     {

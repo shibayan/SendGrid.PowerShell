@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Management.Automation;
 
-using SendGridPowershell.Common;
+using SendGrid.PowerShell.Common;
 
-namespace SendGridPowershell.Statistics
+namespace SendGrid.PowerShell.Statistics
 {
     [Cmdlet(VerbsCommon.Get, "SendGridAdvancedStats")]
     public class GetSendGridAdvancedStats : CmdletBase

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SendGridPowershell.Parse
+namespace SendGrid.PowerShell.Parse.Models
 {
     public class ParseResult
     {
