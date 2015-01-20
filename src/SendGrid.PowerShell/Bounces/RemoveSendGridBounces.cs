@@ -17,7 +17,7 @@ namespace SendGrid.PowerShell.Bounces
         [Parameter(Position = 2, Mandatory = false)]
         public string Type { get; set; }
 
-        [Parameter(Position = 3, Mandatory = false)]
+        [Parameter(Position = 3, Mandatory = false, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
         public string Email { get; set; }
 
         [Parameter(Position = 4, Mandatory = false)]
