@@ -12,11 +12,10 @@ namespace SendGrid.PowerShell.Common
 {
     public abstract class CmdletBase : Cmdlet
     {
-        protected static string ApiUser { get; set; }
-
-        protected static string ApiKey { get; set; }
-
         private const string Endpoint = "https://api.sendgrid.com/api/{0}.{1}.json";
+        private const string EndpointV3 = "https://api.sendgrid.com/v3";
+
+        protected static NetworkCredential ApiCredential;
 
         protected TResult Get<TResult>(string module, string action, object parameters = null)
         {
@@ -26,8 +25,8 @@ namespace SendGrid.PowerShell.Common
 
             var queryString = new QueryStringDictionary(parameters)
             {
-                { "api_user", ApiUser },
-                { "api_key", ApiKey }
+                { "api_user", ApiCredential.UserName },
+                { "api_key", ApiCredential.Password }
             };
 
             var response = client.GetAsync(url + "?" + queryString).Result;
@@ -56,8 +55,8 @@ namespace SendGrid.PowerShell.Common
 
             var queryString = new QueryStringDictionary(parameters)
             {
-                { "api_user", ApiUser },
-                { "api_key", ApiKey }
+                { "api_user", ApiCredential.UserName },
+                { "api_key", ApiCredential.Password }
             };
 
             var content = new FormUrlEncodedContent(queryString);
@@ -69,9 +68,19 @@ namespace SendGrid.PowerShell.Common
             return JsonConvert.DeserializeObject<TResult>(result);
         }
 
+        protected TResult GetV3<TResult>(string path, object parameters)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected TResult PostV3<TResult>(string path, object parameters)
+        {
+            throw new NotImplementedException();
+        }
+
         protected void WriteObject(GenericResult result)
         {
-            if (result.IsSuccess)
+            if (result == null || result.IsSuccess)
             {
                 return;
             }
@@ -79,7 +88,7 @@ namespace SendGrid.PowerShell.Common
             WriteError(new ErrorRecord(new Exception(result.Error.Message), "", ErrorCategory.NotSpecified, null));
         }
 
-        public class QueryStringDictionary : Dictionary<string, string>
+        private class QueryStringDictionary : Dictionary<string, string>
         {
             public QueryStringDictionary(object parameter)
             {
@@ -110,7 +119,7 @@ namespace SendGrid.PowerShell.Common
 
                 foreach (var item in this)
                 {
-                    result.AppendFormat("{0}={1}&", item.Key, WebUtility.UrlEncode(item.Value));
+                    result.AppendFormat("{0}={1}&", item.Key, Uri.EscapeDataString(item.Value));
                 }
 
                 return result.ToString(0, result.Length - 1);

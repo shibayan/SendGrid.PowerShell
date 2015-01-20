@@ -4,7 +4,7 @@ using SendGrid.PowerShell.Common;
 
 namespace SendGrid.PowerShell.Mail
 {
-    [Cmdlet("Send", "SendGridMail")]
+    [Cmdlet(VerbsCommunications.Send, "SendGridMail")]
     public class SendSendGridMail : CmdletBase
     {
         [Parameter(Position = 0, Mandatory = true)]
@@ -19,6 +19,9 @@ namespace SendGrid.PowerShell.Mail
         [Parameter(Position = 3, Mandatory = false)]
         public string Text { get; set; }
 
+        [Parameter(Position = 4, Mandatory = false)]
+        public string Html { get; set; }
+
         protected override void ProcessRecord()
         {
             var result = Post<GenericResult>("mail", "send", new
@@ -26,7 +29,8 @@ namespace SendGrid.PowerShell.Mail
                 to = To,
                 from = From,
                 subject = Subject,
-                text = Text
+                text = Text,
+                html = Html
             });
 
             WriteObject(result);

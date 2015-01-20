@@ -4,7 +4,7 @@ using SendGrid.PowerShell.Common;
 
 namespace SendGrid.PowerShell.Filter
 {
-    [Cmdlet("Disable", "SendGridFilter")]
+    [Cmdlet(VerbsLifecycle.Disable, "SendGridFilter")]
     public class DisableSendGridFilter : CmdletBase
     {
         [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]

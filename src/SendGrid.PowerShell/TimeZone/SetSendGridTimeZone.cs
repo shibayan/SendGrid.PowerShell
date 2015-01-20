@@ -2,20 +2,20 @@
 
 using SendGrid.PowerShell.Common;
 
-namespace SendGrid.PowerShell.Filter
+namespace SendGrid.PowerShell.TimeZone
 {
-    [Cmdlet(VerbsLifecycle.Enable, "SendGridFilter")]
-    public class EnableSendGridFilter : CmdletBase
+    [Cmdlet(VerbsCommon.Set, "SendGridTimeZone")]
+    public class SetSendGridTimeZone : CmdletBase
     {
         [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true)]
         [ValidateNotNullOrEmpty]
-        public string Name { get; set; }
+        public string TimeZone { get; set; }
 
         protected override void ProcessRecord()
         {
-            var result = Get<GenericResult>("filter", "activate", new
+            var result = Post<GenericResult>("timezone", "edit", new
             {
-                name = Name
+                timezone = TimeZone
             });
 
             WriteObject(result);
