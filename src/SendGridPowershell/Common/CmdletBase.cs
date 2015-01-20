@@ -34,7 +34,18 @@ namespace SendGrid.PowerShell.Common
 
             var content = response.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
 
-            return JsonConvert.DeserializeObject<TResult>(content);
+            try
+            {
+                return JsonConvert.DeserializeObject<TResult>(content);
+            }
+            catch (JsonSerializationException)
+            {
+                var result = JsonConvert.DeserializeObject<GenericResult>(content);
+
+                WriteObject(result);
+
+                return default(TResult);
+            }
         }
 
         protected TResult Post<TResult>(string module, string action, object parameters)

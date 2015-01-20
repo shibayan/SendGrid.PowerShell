@@ -20,7 +20,7 @@ namespace SendGrid.PowerShell.Account
             ApiUser = Username;
             ApiKey = Password;
 
-            WriteVerbose(string.Format("Account \"{0}\" has been added", Username));
+            WriteWarning(string.Format("Account \"{0}\" has been added", Username));
         }
     }
 }
