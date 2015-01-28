@@ -1,12 +1,18 @@
-SendGridPowershell
+SendGrid.PowerShell
 ==================
 
-SendGrid PowerShell Cmdlets
+PowerShell Cmdlets for SendGrid
 
 Account
 ------------------
 
 ### Add-SendGridAccount
+
+```
+$cred = Get-Credential
+
+Add-SendGridAccount $cred
+```
 
 Blocks
 ------------------
